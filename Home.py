@@ -15,6 +15,18 @@ df_proyectos = df_proyectos.rename(columns={'Nombre': 'Nombre Proyecto'})
 df_final = df_personas_proyectos.merge(right=df_personas, left_on=['ID persona'], right_on=['ID'])
 df_final = df_final.merge(right=df_proyectos, left_on=['ID proyecto'], right_on=['ID'])
 
+nombres = ['Mostrar todos']
+
+for index, row in df_personas.iterrows():
+    nombres.append(row['Nombre Persona'])
+    
+responsable = st.selectbox("Selecciona un responsable/colaborador", nombres)
+
+if responsable != 'Mostrar todos':
+    df_proyectos = df_final.loc[df_final['Nombre Persona'] == responsable]
+    df_proyectos = df_proyectos[['ID proyecto', 'Nombre Proyecto', 'Objetivo General']].copy()
+    df_proyectos.rename(columns={'ID proyecto': 'ID'}, inplace=True)
+
 col_izquierda, col_derecha = st.columns(2)
 
 with col_izquierda:
@@ -23,6 +35,8 @@ with col_izquierda:
 with col_derecha:
         st.header("Responsables")
 
+if df_proyectos.empty:
+        st.info("Esta persona no tiene proyectos asignados")
 
 for index, row in df_proyectos.iterrows():
     
