@@ -18,7 +18,12 @@ def load_secrets():
 
 sheets_id, acc_creds = load_secrets()
 
-gc = gspread.service_account_from_dict(acc_creds)
+scopes = [
+        "https://www.googleapis.com/auth/spreadsheets.readonly",
+        "https://www.googleapis.com/auth/drive.readonly",
+    ]
+
+gc = gspread.service_account_from_dict(acc_creds, scopes)
 sh = gc.open_by_key(sheets_id)
 
 # El decorador st.cache_data sirve para mantener los datos en la memoria cache durante un
