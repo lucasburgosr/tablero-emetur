@@ -2,12 +2,24 @@ import streamlit as st
 import gspread
 import pandas as pd
 import textwrap
+import json
 
 # Configuración de la conexión con Google Sheets
-SHEETS_ID = st.secrets["SHEETS_ID"]
-ACCOUNT_CRED = st.secrets["ACCOUNT_CRED"]
-gc = gspread.service_account(ACCOUNT_CRED)
-sh = gc.open_by_key(SHEETS_ID)
+
+def load_secrets():
+    sheets_id = st.secrets["ACCOUNT_CRED"]["SHEETS_ID"]
+    account_creds = st.secrets["ACCOUNT_CRED"]
+    if isinstance(account_creds, str):
+        acc_creds = json.loads(account_creds)
+    else:
+        acc_creds = dict(account_creds)
+        
+    return sheets_id, acc_creds
+
+sheets_id, acc_creds = load_secrets()
+
+gc = gspread.service_account_from_dict(acc_creds)
+sh = gc.open_by_key(sheets_id)
 
 # El decorador st.cache_data sirve para mantener los datos en la memoria cache durante un
 # determinado periodo de tiempo sin tener que hacer nuevas requests a la API.
