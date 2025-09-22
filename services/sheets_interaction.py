@@ -7,12 +7,15 @@ import json
 # Configuración de la conexión con Google Sheets
 
 def load_secrets():
-    sheets_id = st.secrets["ACCOUNT_CRED"]["SHEETS_ID"]
+    sheets_id = st.secrets["SHEETS_ID"]
     account_creds = st.secrets["ACCOUNT_CRED"]
     if isinstance(account_creds, str):
         acc_creds = json.loads(account_creds)
     else:
         acc_creds = dict(account_creds)
+        
+    if "private_key" in acc_creds:
+        acc_creds["private_key"] = acc_creds["private_key"].replace("\\n", "\n")
         
     return sheets_id, acc_creds
 
