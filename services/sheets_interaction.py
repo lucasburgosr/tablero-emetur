@@ -4,8 +4,8 @@ import pandas as pd
 import textwrap
 
 # Configuración de la conexión con Google Sheets
-SHEETS_ID = st.secrets("SHEETS_ID")
-ACCOUNT_CRED = st.secrets("ACCOUNT_CRED")
+SHEETS_ID = st.secrets["SHEETS_ID"]
+ACCOUNT_CRED = st.secrets["ACCOUNT_CRED"]
 gc = gspread.service_account(ACCOUNT_CRED)
 sh = gc.open_by_key(SHEETS_ID)
 
