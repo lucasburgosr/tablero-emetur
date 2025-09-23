@@ -3,7 +3,7 @@ import pandas as pd
 import gspread
 from streamlit_calendar import calendar
 from services.sheets_interaction import get_acciones_from_sheets, get_proyectos_from_sheets
-# st.set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 
 # Configuración del calendario
 calendar_options = {
