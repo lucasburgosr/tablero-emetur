@@ -29,14 +29,14 @@ if responsable != 'Mostrar todos':
 
 col_izquierda, col_derecha = st.columns(2)
 
-with col_izquierda:
-        st.header("Proyecto")
-        
-with col_derecha:
-        st.header("Responsables")
-
 if df_proyectos.empty:
         st.info("Esta persona no tiene proyectos asignados")
+else:
+    with col_izquierda:
+            st.header("Proyecto")
+            
+    with col_derecha:
+            st.header("Responsables")
 
 for index, row in df_proyectos.iterrows():
     
