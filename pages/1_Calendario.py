@@ -51,6 +51,7 @@ if proyecto_seleccionado != 'Seleccionar...':
             'start': row['start'],
             'description': 'Descripción: ' + row['Descripción breve'],
             'end': row['start'],
+            'fecha_fin': row['end'],
             'color': 'green'
         }
 
@@ -59,6 +60,7 @@ if proyecto_seleccionado != 'Seleccionar...':
             'start': row['end'],
             'description': 'Descripción: ' + row['Descripción breve'],
             'end': row['end'],
+            'fecha_inicio': row['start'],
             'color': 'red'
         }
 
@@ -89,7 +91,9 @@ with col_derecha:
             st.subheader(evento_seleccionado['eventClick']['event']['extendedProps']['description'])
             if evento_seleccionado['eventClick']['event']['backgroundColor'] == 'green':
                 st.subheader(f'Fecha de inicio: {evento_seleccionado['eventClick']['event']['start']}')
+                st.subheader(f'Fecha de finalización: {evento_seleccionado['eventClick']['event']['extendedProps']['fecha_fin']}')
             elif evento_seleccionado['eventClick']['event']['backgroundColor'] == 'red':
-                st.subheader(f'Fecha de fin: {evento_seleccionado['eventClick']['event']['start']}')
+                st.subheader(f'Fecha de inicio: {evento_seleccionado['eventClick']['event']['extendedProps']['fecha_inicio']}')
+                st.subheader(f'Fecha de finalización: {evento_seleccionado['eventClick']['event']['start']}')
     else:
         st.info('Selecciona una acción para ver sus detalles')
