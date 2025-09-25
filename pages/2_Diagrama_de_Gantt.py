@@ -45,7 +45,7 @@ if proyecto_seleccionado != 'Seleccionar...':
         )
         
         fig.add_vline(x=fecha_hoy, line_color='blue')
-        fig.add_annotation(x=fecha_hoy, text= f'Hoy, {fecha_string}', y=1.05, yref='paper', showarrow=False, font=dict(size=16))
+        fig.add_annotation(x=fecha_hoy, text= f'Hoy, {fecha_string}', y=1.05, yref='paper', showarrow=False, font=dict(size=14))
 
         fig.update_layout(
             height=accion_height,
