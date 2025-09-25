@@ -1,6 +1,4 @@
 import streamlit as st
-import pandas as pd
-import gspread
 from streamlit_calendar import calendar
 from services.sheets_interaction import get_acciones_from_sheets, get_proyectos_from_sheets
 st.set_page_config(layout="wide")
@@ -86,14 +84,14 @@ with col_derecha:
         st.write('')
         st.write('')
         with st.container(border=True):
-            st.header(f'Acción: {evento_seleccionado['eventClick']['event']['title']}')
+            st.markdown(f'''### Acción: {evento_seleccionado['eventClick']['event']['title']}''')
             
-            st.subheader(evento_seleccionado['eventClick']['event']['extendedProps']['description'])
+            st.markdown(f'''#### {evento_seleccionado['eventClick']['event']['extendedProps']['description']}''')
             if evento_seleccionado['eventClick']['event']['backgroundColor'] == 'green':
-                st.subheader(f'Fecha de inicio: {evento_seleccionado['eventClick']['event']['start']}')
-                st.subheader(f'Fecha de finalización: {evento_seleccionado['eventClick']['event']['extendedProps']['fecha_fin']}')
+                st.markdown(f''' ##### Fecha de inicio: {evento_seleccionado['eventClick']['event']['start']}''')
+                st.markdown(f'''##### Fecha de finalización: {evento_seleccionado['eventClick']['event']['extendedProps']['fecha_fin']}''')
             elif evento_seleccionado['eventClick']['event']['backgroundColor'] == 'red':
-                st.subheader(f'Fecha de inicio: {evento_seleccionado['eventClick']['event']['extendedProps']['fecha_inicio']}')
-                st.subheader(f'Fecha de finalización: {evento_seleccionado['eventClick']['event']['start']}')
+                st.markdown(f'''##### Fecha de inicio: {evento_seleccionado['eventClick']['event']['extendedProps']['fecha_inicio']}''')
+                st.markdown(f'''##### Fecha de finalización: {evento_seleccionado['eventClick']['event']['start']}''')
     else:
         st.info('Selecciona una acción para ver sus detalles')

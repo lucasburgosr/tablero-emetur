@@ -1,6 +1,11 @@
 import streamlit as st
 import plotly.express as px
+import pandas as pd
+from datetime import datetime
 from services.sheets_interaction import get_acciones_from_sheets, get_proyectos_from_sheets
+
+fecha_hoy = datetime.today()
+fecha_string = fecha_hoy.strftime("%d/%m/%Y")
 
 st.set_page_config(layout="wide")
 st.header("Diagrama de Gantt")
@@ -38,6 +43,9 @@ if proyecto_seleccionado != 'Seleccionar...':
             y='title_wrapped',
             color='Estado',
         )
+        
+        fig.add_vline(x=fecha_hoy, line_color='blue')
+        fig.add_annotation(x=fecha_hoy, text= f'Hoy, {fecha_string}', y=1.05, yref='paper', showarrow=False, font=dict(size=16))
 
         fig.update_layout(
             height=accion_height,
