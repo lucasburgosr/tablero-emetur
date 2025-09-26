@@ -12,7 +12,7 @@ proximo_cumpleanos = proximo_cumpleanos.iloc[0]
 
 nombre_cumpleanos = proximo_cumpleanos['Nombre']
 
-st.write(f"Próximo cumpleanos 🎈: {nombre_cumpleanos}")
+st.write(f"Próximo cumpleaños 🎈: {nombre_cumpleanos}")
 
 st.divider()
 
