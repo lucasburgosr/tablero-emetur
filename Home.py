@@ -11,8 +11,10 @@ proximo_cumpleanos = df_cumpleanos.loc[df_cumpleanos['Estado'] == 'Próximo']
 proximo_cumpleanos = proximo_cumpleanos.iloc[0]
 
 nombre_cumpleanos = proximo_cumpleanos['Nombre']
+fecha_cumpleanos = proximo_cumpleanos['Fecha']
 
 st.write(f"Próximo cumpleaños 🎈: {nombre_cumpleanos}")
+st.write(f"Fecha 📆: {fecha_cumpleanos}")
 
 st.divider()
 
