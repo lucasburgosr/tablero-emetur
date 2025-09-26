@@ -1,14 +1,8 @@
 import streamlit as st
 import plotly.express as px
 import pandas as pd
-import locale
 from datetime import datetime
 from services.sheets_interaction import get_acciones_from_sheets, get_proyectos_from_sheets
-
-try:
-    locale.setlocale(locale.LC_ALL, 'es_ES.UTF-8')
-except locale.Error as e:
-    st.warning(f"Could not set locale: {e}. Ensure the locale is installed on your system.")
 
 fecha_hoy = datetime.today()
 fecha_string = fecha_hoy.strftime("%d/%m/%Y")
@@ -29,6 +23,7 @@ proyecto_seleccionado = st.selectbox(
 
 plotly_config = {
     'locale': 'es',
+    'modeBarButtonsToRemove': ['zoom2d', 'pan2d', 'select2d', 'lasso2d', 'zoomIn2d', 'zoomOut2d', 'autoScale2d']
 }
 
 # Carga las acciones en el gráfico en caso de que haya un proyecto seleccionado y este
