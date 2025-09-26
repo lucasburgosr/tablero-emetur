@@ -8,15 +8,8 @@ calendar_options = {
     'selectable': True,
     'locale': 'es',
     'headerToolbar': {
-        'left': 'prev,next',
-        'center': 'title',
-        'right': 'dayGridMonth,dayGridWeek,dayGridDay',
-    },
-    'buttonText': {
-        'today': 'Hoy',
-        'month': 'Mes',
-        'week': 'Semana',
-        'day': 'Día'
+        'right': 'prev,next',
+        'left': 'title',
     },
     'slotMinTime': '06:00:00',
     'slotMaxTime': '18:00:00',

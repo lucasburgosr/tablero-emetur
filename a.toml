@@ -1,0 +1,15 @@
+SHEETS_ID = "1W5ok1XMdaEUtXiSTpCZvQMHxB8YzvxJo8M8SDIJ-Rxc"
+
+CUMPLEAÑOS_ID = "1u2URfbMozwiyZkTYU7QJr4O36V7izKuz7pj3roT85hQ"
+
+[ACCOUNT_CRED]
+type = "service_account"
+project_id = "gestion-emetur"
+private_key_id = "19b4c17fedf646030564e3caf285dc395b26c78f"
+private_key = """-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDc7T0zGJ1Mwbg8\nxg9DHuMHH+IsJEN4KNaNmQJYGzYmPz5lMUBmuDu19jgwjskONduE8sPIV8Bdpv2P\nSIAyRSZDdVaQq3nLXilORkJF//O1NREOgjxtY87cuV8ip/yyShmsc61hhCa3ECt7\nx6JdLHY6dgMls8i8/ZyG5+kbJ/usfi6sVbR12zM6exy/oIKvaIBTVfsorkAQ1ifl\nJmDMxQ2L1ONeCNnT3AnCw9fW26k2fim/pnMpD5aMn+bYkCt9xan3d0qmrlZBgd0i\nm5mKA0QKavAy1YBH3ZFUOa2lw2wd1MysntJOphQOJhQWQa6+Vl+yyGFnzjs2ZpSv\nKAibvGJfAgMBAAECggEABgI8fyYBxPerUqo6xtZeSXBR0zK5B5Vpj++ukCxd08vP\nnxlbXHQeL14Ju7sHhDSPdUzUNn3b95rHLTsR6HbHAdefWujhKxQ7rV52XC8IJgwn\ngmg+qW3tT2esF92tHw4h0hgNvTkK+zALMvz7wB4yDyIw0w5rvM4GoYAnPLVg0Uyg\nEyUWKJFjZjoQj9L/MDCvWAu6Iz9ng9/4QIJTzHAS8lTYYI776YXNJg2YLRv1nw1Y\nX+kbPjUCFwhk9xCwOyIVdAH0sVy8dOGnCYE8oYNzQ3JQKNEomWR7YwWH+GtO1plC\nj8XdTzIbp5rAyoHgVVtRh0igRoXhV9ajBlhbw1GM0QKBgQDuHYwQZdU1Q8vKh0J0\nXUH+PutIshN0RhsA9lJHBxjN3JRYJ1Clx/JjUvDd3Q5kPMk8t8z9z92G0dvFvZrr\n7p2nyTc3QzkLxfb96Cc1tNRVB6diGiVpYtdvHZUcM4MHJciJrFYpFvDXarBbqeKI\nmnnYr7cGEBQhPP1NMEkQNSLoJwKBgQDthTCS3juYn1DPe8A25on1/fQsd+VhDQOw\n+GWLdUhM29BtVJa4RxF9cIMZh2IebQK5+FiKhWKexTgeO+C8JIjZdxziOXCk/Xmr\nFLDYNhs936gaeOWoZkV5O6cT8CXw0k8s/l15aW1XqVP6yWtBU98P4fcA3l+XakWL\n/IDuR16fCQKBgQDhR2sgiHezMTU5o8anuSOam4SW/oORWlJqEqG9OWWqPqrKzEds\n0ULt3aatAVuAUlJB89MpvuPjjeDTsJNF7DeUaramvh7WmLEZf+64zSCmYdtm4T3L\n+wu/wMk2KTYqKQEV38qUjXPHGtVHo+8DNsNY0sXiIowo9j7gLHKzttITuQKBgQCg\nOgMEcGofkQmAjeiioG5cxU3cWZ0hFRhyX36QzzNQtdAqkK+D7F0+E5I8vHlSMRNv\nxLpl54kZtc0fiCEYikTO/m07pqf4hQ14fWK21/kUijXqdbfnG+at27Hf31aY2CaV\nIZqI9rfONOnz+cAit6N4IWTw7xHpIMV9o36OPxLzkQKBgB1dYiW9Jw1nmYGFKLtR\nHyfH/EJtCpyRM1x6VnkvoiNgDbaeVeJ8zb7DObYebpqIgalCM3IXimc9qEWxttAN\nhm/DGHj3NnoGeB9p1YqSZHW5B5byl9omf7D0SF23aQWr25h4CTh5PyGk/gIwtLae\nOGOi0WQMARlRaLNh9S8QTw/e\n-----END PRIVATE KEY-----\n"""
+client_email = "gestion-emetur@gestion-emetur.iam.gserviceaccount.com"
+client_id = "108031304691858650412"
+token_uri = "https://oauth2.googleapis.com/token"
+auth_provider_x509_cert_url = "https://www.googleapis.com/oauth2/v1/certs"
+client_x509_cert_url = "https://www.googleapis.com/robot/v1/metadata/x509/gestion-emetur%40gestion-emetur.iam.gserviceaccount.com"
+universe_domain = "googleapis.com"

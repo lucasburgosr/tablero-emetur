@@ -1,8 +1,21 @@
 import streamlit as st
 import pandas as pd
-from services.sheets_interaction import get_acciones_from_sheets, get_proyectos_from_sheets, get_personas_from_sheets, get_persona_proyecto_from_sheets
+from services.sheets_interaction import get_cumpleaños_from_sheets, get_proyectos_from_sheets, get_personas_from_sheets, get_persona_proyecto_from_sheets
 
 st.title("Visualización de Proyectos - EMETUR")
+
+df_cumpleaños = get_cumpleaños_from_sheets()
+
+proximo_cumpleaños = df_cumpleaños.loc[df_cumpleaños['Estado'] == 'Próximo']
+
+proximo_cumpleaños = proximo_cumpleaños.iloc[0]
+
+nombre_cumpleaños = proximo_cumpleaños['Nombre']
+
+st.write(f"Próximo cumpleaños 🎈: {nombre_cumpleaños}")
+
+st.divider()
+
 st.set_page_config(layout='wide')
 
 df_proyectos = get_proyectos_from_sheets()
