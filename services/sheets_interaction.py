@@ -31,7 +31,7 @@ sh = gc.open_by_key(sheets_id)
 
 """ gc = gspread.service_account(filename="./gestion-emetur-19b4c17fedf6.json")
 sh = gc.open_by_key("1W5ok1XMdaEUtXiSTpCZvQMHxB8YzvxJo8M8SDIJ-Rxc") """
-sh_cumpleaños = gc.open_by_key("1u2URfbMozwiyZkTYU7QJr4O36V7izKuz7pj3roT85hQ")
+sh_cumpleanos = gc.open_by_key("1u2URfbMozwiyZkTYU7QJr4O36V7izKuz7pj3roT85hQ")
 
 # El decorador st.cache_data sirve para mantener los datos en la memoria cache durante un
 # determinado periodo de tiempo sin tener que hacer nuevas requests a la API.
@@ -74,8 +74,8 @@ def get_persona_proyecto_from_sheets():
     return df_personas_proyectos
 
 @st.cache_data(ttl=300)
-def get_cumpleaños_from_sheets():
-    cumpleaños = sh_cumpleaños.get_worksheet(0).get_all_records()
-    df_cumpleaños = pd.DataFrame(data=cumpleaños, index=None)
+def get_cumpleanos_from_sheets():
+    cumpleanos = sh_cumpleanos.get_worksheet(0).get_all_records()
+    df_cumpleanos = pd.DataFrame(data=cumpleanos, index=None)
     
-    return df_cumpleaños
+    return df_cumpleanos
