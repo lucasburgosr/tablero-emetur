@@ -2,6 +2,15 @@ import streamlit as st
 import pandas as pd
 from services.sheets_interaction import get_cumpleanos_from_sheets, get_proyectos_from_sheets, get_personas_from_sheets, get_persona_proyecto_from_sheets
 
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
 st.title("Visualización de Proyectos - EMETUR")
 
 df_cumpleanos = get_cumpleanos_from_sheets()
