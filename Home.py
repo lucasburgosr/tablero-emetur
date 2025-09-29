@@ -2,14 +2,16 @@ import streamlit as st
 import pandas as pd
 from services.sheets_interaction import get_cumpleanos_from_sheets, get_proyectos_from_sheets, get_personas_from_sheets, get_persona_proyecto_from_sheets
 
-hide_streamlit_style = """
+hide_badges = """
     <style>
-    #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
-    header {visibility: hidden;}
+    /* Ocultar badge de "Hosted with Streamlit" */
+    a._container_gzau3_1._viewerBadge_nim44_23 {
+        display: none !important;
+    }
     </style>
 """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+st.markdown(hide_badges, unsafe_allow_html=True)
 
 st.title("Visualización de Proyectos - EMETUR")
 
